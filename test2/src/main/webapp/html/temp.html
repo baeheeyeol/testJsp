@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        #container {
+            margin: 0 auto;
+            width: 80%;
+            height: 100%;
+        }
+
+        form {
+            width: 100%;
+            height: 100%;
+        }
+
+        #left {
+            float: left;
+            width: 45%;
+            height: 100%;
+        }
+
+        #inputText {
+            width: 100%;
+            height: 80%;
+        }
+        #center{
+            margin-top: 400px;
+            margin-left: 10px;
+            margin-right: 10px;
+            float: left;
+        }
+
+        #right {
+            float: left;
+            width: 45%;
+            height: 100%;
+
+        }
+
+        #outputText {
+            width: 100%;
+            height: 80%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <form action="../print" name="html" id="html">
+            <div id="left">
+                <h1>Input</h1>
+              
+                <textarea
+                    onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1; false;}"
+                    name="inputText" id="inputText" cols="100" rows="50" wrap="hard">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title>Document&lt/title&gt;
+&lt;/head&gt;
+    &lt;body&gt;
+    안녕하세요 월드입니다!
+    &lt;/body&gt;
+    &lt;/html&gt;
+</textarea>
+
+            </div>
+            <div id="center">
+                <div>
+                    <input type="button" value="Run>" onclick="copyWrite()">
+                </div>
+            </div>
+            <div id="right">
+                <h1>Result</h1>
+                <iframe id="outputText" srcdoc='안녕하세요 월드입니다!'></iframe>
+
+
+        </form>
+    </div>
+    </div>
+    <script>
+        function copyWrite() {
+            let outputText = document.querySelector("#outputText")
+            let inputText = document.querySelector("#inputText").value
+
+            outputText.setAttribute('srcdoc', inputText)
+            console.log(inputText)
+        }
+    </script>
+</body>
+
+</html>

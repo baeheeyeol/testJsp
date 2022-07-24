@@ -1,0 +1,3655 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&display=swap');
+*{
+    font-family: 'Gowun Batang', serif;
+}
+html,
+body {
+margin: 0;
+width: 100%;
+height: 100%;
+}
+#container{
+    width: 100%;
+    height: 100%;
+    background-color:#f0f0f0
+}
+.block{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #f0f0f0;
+}
+.block >div{
+    width: 10%;
+    height: 20%;
+    position: relative;
+}
+@keyframes backcolorChange{
+    0%{
+        background-color: #9a9a9a;
+    }
+
+    50.1%{
+        background-color: #f0f0f0;
+    }
+    100%{
+        background-color: #9a9a9a;
+    }
+}
+@keyframes pontColorChange{
+    0%{
+        color:#f0f0f0;
+    }
+    50.1%{
+        color:#9a9a9a;
+    }
+    100%{
+        color:#f0f0f0;
+    }
+}
+a{ 
+    animation: pontColorChange 36s ease infinite;
+    font-weight: bold;
+    font-size: 150%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-top: 40%;
+    text-align: center;
+    text-decoration: none;
+    transition: 1s;
+}
+a:hover{
+    font-size: 300%;
+}
+.block >div::after{
+    content:'';
+    position:absolute;
+    background:  linear-gradient(45deg,#f0f0f0,#9a9a9a);
+}
+.block >div::before{
+    content:'';
+    position:absolute;
+    background:  linear-gradient(45deg,#9a9a9a,#f0f0f0);
+}
+.block :nth-child(n+36)::before{
+    background:  linear-gradient(45deg,#f0f0f0,#9a9a9a);
+}
+.block :nth-child(n+32):nth-child(-n+35)::before{
+    background:  linear-gradient(45deg,#f0f0f0,#9a9a9a);
+}
+.block :nth-child(n+28):nth-child(-n+30)::before{
+    background:  linear-gradient(45deg,#f0f0f0,#9a9a9a);
+}
+.block:nth-child(n){
+    animation: backcolorChange 36s ease infinite;
+    background-color: #9a9a9a;
+}
+#pa20::before,#pa24::before,#pa25::before{
+    background:  linear-gradient(45deg,#f0f0f0,#9a9a9a);
+}
+.block :nth-child(n+36)::after{
+    background:  linear-gradient(45deg,#9a9a9a,#f0f0f0);
+}
+.block :nth-child(n+32):nth-child(-n+35)::after{
+    background:  linear-gradient(45deg,#9a9a9a,#f0f0f0);
+}
+.block :nth-child(n+28):nth-child(-n+30)::after{
+    background:  linear-gradient(45deg,#9a9a9a,#f0f0f0);
+}
+#pa20::after,#pa24::after,#pa25::after{
+    background:  linear-gradient(45deg,#9a9a9a,#f0f0f0);
+}
+@keyframes leftRightTop1 {
+    /* 1회 */
+    0% {
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: left;
+        opacity: 0;
+    }
+    6.25% {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    6.251% {
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    12.5% {
+        transform: scaleX(0);
+        transform-origin: right;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 2회 */
+    12.51%{
+        opacity: 0;
+    }
+    18.75%{   
+    }
+    18.751%{
+    }
+    24.9%{
+    }
+    /* 3회 */
+    25%{
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: left;
+        opacity: 0;
+    }
+    31.25%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    31.251%{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    37.5%{
+        transform: scaleX(0);
+        transform-origin: right;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 4회 */
+    37.51%{
+        opacity: 0;
+    }
+    43.75%{
+    }
+    43.751%{
+    }
+    49.9%{
+    }
+    /* 5회 */
+    50%{  
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: left;
+        opacity: 0;
+    }
+    56.25%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    56.251%{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    62.5%{
+        transform: scaleX(0);
+        transform-origin: right;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 6회 */
+    62.51%{
+        opacity: 0;
+    }
+    68.75%{
+    }
+    68.751%{
+    }
+    74.9%{
+    }
+    /* 7회 */
+    75%{
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: left;
+        opacity: 0;
+    }
+    81.25%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    81.251%{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    87.5%{
+        transform: scaleX(0);
+        transform-origin: right;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 8회 */
+    87.51%{
+        opacity: 0;
+    }
+    93.75%{
+    }
+    93.751%{
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes leftRightTop2 {
+    /* 1회 */
+    0% {
+        opacity: 0;
+    }
+    6.25% {
+    }
+    6.251% {
+    }
+    12.5% {
+    }
+    /* 2회 */
+    12.51%{
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: left;
+        opacity: 0;
+    }
+    18.75%{  
+        transform: scaleX(1);
+        transform-origin: left; 
+    }
+    18.751%{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    24.9%{
+        transform: scaleX(0);
+        transform-origin: right;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 3회 */
+    25%{
+    }
+    31.25%{
+    }
+    31.251%{
+    }
+    37.5%{
+    }
+    /* 4회 */
+    37.51%{
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: left;
+        opacity: 0;
+    }
+    43.75%{
+        transform: scaleX(1);
+        transform-origin: left; 
+    }
+    43.751%{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    49.9%{
+        transform: scaleX(0);
+        transform-origin: right;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 5회 */
+    50%{  
+    }
+    56.25%{
+    }
+    56.251%{
+    }
+    62.5%{
+    }
+    /* 6회 */
+    62.51%{
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: left;
+        opacity: 0;
+    }
+    68.75%{
+        transform: scaleX(1);
+        transform-origin: left; 
+    }
+    68.751%{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    74.9%{
+        transform: scaleX(0);
+        transform-origin: right;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 7회 */
+    75%{
+        opacity: 0;
+    }
+    /* 8회 */
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes leftRightTop3 {
+    /* 1회 */
+    0% {
+        opacity: 0;
+    }
+    6.25% {
+    }
+    6.251% {
+    }
+    12.5% {
+    }
+    /* 2회 */
+    12.51%{
+    }
+    18.75%{   
+    }
+    18.751%{
+    }
+    24.9%{
+    }
+    /* 3회 */
+    25%{
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: left;
+        opacity: 0;
+    }
+    31.25%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    31.251%{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    37.5%{
+        transform: scaleX(0);
+        transform-origin: right;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 4회 */
+    37.51%{
+        opacity: 0;
+    }
+    43.75%{
+    }
+    43.751%{
+    }
+    49.9%{
+    }
+    /* 5회 */
+    50%{  
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: left;
+        opacity: 0;
+    }
+    56.25%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    56.251%{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    62.5%{
+        transform: scaleX(0);
+        transform-origin: right;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 6회 */
+    62.51%{
+        opacity: 0;
+    }
+    68.75%{
+    }
+    68.751%{
+    }
+    74.9%{
+    }
+    /* 7회 */
+    75%{
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: left;
+        opacity: 0;
+    }
+    81.25%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    81.251%{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    87.5%{
+        transform: scaleX(0);
+        transform-origin: right;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 8회 */
+    87.51%{
+    opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes leftRightTop4 {
+    /* 1회 */
+    0% {
+        opacity: 0;
+    }
+    6.25% {
+    }
+    6.251% {
+    }
+    12.5% {
+    }
+    /* 2회 */
+    12.51%{
+    }
+    18.75%{  
+    }
+    18.751%{
+    }
+    24.9%{
+    }
+    /* 3회 */
+    25%{
+    }
+    31.25%{
+    }
+    31.251%{
+    }
+    37.5%{
+    }
+    /* 4회 */
+    37.51%{
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: left;
+        opacity: 0;
+    }
+    43.75%{
+        transform: scaleX(1);
+        transform-origin: left; 
+    }
+    43.751%{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    49.9%{
+        transform: scaleX(0);
+        transform-origin: right;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 5회 */
+    50%{  
+    }
+    56.25%{
+    }
+    56.251%{
+    }
+    62.5%{
+    }
+    /* 6회 */
+    62.51%{
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: left;
+        opacity: 0;
+    }
+    68.75%{
+        transform: scaleX(1);
+        transform-origin: left; 
+    }
+    68.751%{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    74.9%{
+        transform: scaleX(0);
+        transform-origin: right;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 7회 */
+    75%{
+        opacity: 0;
+    }
+    81.25%{
+    }
+    81.251%{
+    }
+    87.5%{
+    }
+    /* 8회 */
+    87.51%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes leftRightTop5 {
+    /* 1회 */
+    0% {
+        opacity: 0;
+    }
+    6.25% {
+    }
+    6.251% {
+    }
+    12.5% {
+    }
+    /* 2회 */
+    12.51%{
+    }
+    18.75%{   
+    }
+    18.751%{
+    }
+    24.9%{
+    }
+    /* 3회 */
+    25%{
+    }
+    31.25%{
+    }
+    31.251%{
+    }
+    37.5%{
+    }
+    /* 4회 */
+    37.51%{
+    }
+    43.75%{
+    }
+    43.751%{
+    }
+    49.9%{
+    }
+    /* 5회 */
+    50%{  
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: left;
+        opacity: 0;
+    }
+    56.25%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    56.251%{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    62.5%{
+        transform: scaleX(0);
+        transform-origin: right;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 6회 */
+    62.51%{
+        opacity: 0;
+    }
+    68.75%{
+    }
+    68.751%{
+    }
+    74.9%{
+    }
+    /* 7회 */
+    75%{
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: left;
+        opacity: 0;
+    }
+    81.25%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    81.251%{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    87.5%{
+        transform: scaleX(0);
+        transform-origin: right;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 8회 */
+    87.51%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes leftRightTop6{
+    /* 1회 */
+    0% {
+        opacity: 0;
+    }
+    6.25% {
+    }
+    6.251% {
+    }
+    12.5% {
+    }
+    /* 2회 */
+    12.51%{
+    }
+    18.75%{  
+    }
+    18.751%{
+    }
+    24.9%{
+    }
+    /* 3회 */
+    25%{
+    }
+    31.25%{
+    }
+    31.251%{
+    }
+    37.5%{
+    }
+    /* 4회 */
+    37.51%{
+    }
+    43.75%{
+    }
+    43.751%{
+    }
+    49.9%{
+    }
+    /* 5회 */
+    50%{  
+    }
+    56.25%{
+    }
+    56.251%{
+    }
+    62.5%{
+    }
+    /* 6회 */
+    62.51%{
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: left;
+        opacity: 0;
+    }
+    68.75%{
+        transform: scaleX(1);
+        transform-origin: left; 
+    }
+    68.751%{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    74.9%{
+        transform: scaleX(0);
+        transform-origin: right;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 7회 */
+    75%{
+        opacity: 0;
+    }
+    81.25%{
+    }
+    81.251%{
+    }
+    87.5%{
+    }
+    /* 8회 */
+    87.51%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes leftRightTop7 {
+    /* 1회 */
+    0% {
+        opacity: 0;
+    }
+    6.25% {
+    }
+    6.251% {
+    }
+    12.5% {
+    }
+    /* 2회 */
+    12.51%{
+    }
+    18.75%{   
+    }
+    18.751%{
+    }
+    24.9%{
+    }
+    /* 3회 */
+    25%{
+    }
+    31.25%{
+    }
+    31.251%{
+    }
+    37.5%{
+    }
+    /* 4회 */
+    37.51%{
+    }
+    43.75%{
+    }
+    43.751%{
+    }
+    49.9%{
+    }
+    /* 5회 */
+    50%{  
+    }
+    56.25%{
+    }
+    56.251%{
+    }
+    62.5%{
+    }
+    /* 6회 */
+    62.51%{
+    }
+    68.75%{
+    }
+    68.751%{
+    }
+    74.9%{
+    }
+    /* 7회 */
+    75%{
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: left;
+        opacity: 0;
+    }
+    81.25%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    81.251%{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    87.5%{
+        transform: scaleX(0);
+        transform-origin: right;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 8회 */
+    87.51%{
+        opacity: 0;
+    }
+    93.75%{
+    }
+    93.751%{
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes topBottomLeft1 {
+    /* 1회 */
+    0% {
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    6.25% {
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    6.251% {
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    12.5% {
+        transform: scaleY(0);
+        transform-origin: bottom;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 2회 */
+    12.51%{
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    18.75%{   
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    18.751%{
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    24.9%{
+        transform: scaleY(0);
+        transform-origin: bottom;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 3회 */
+    25%{
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    31.25%{
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    31.251%{
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    37.5%{
+        transform: scaleY(0);
+        transform-origin: bottom;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 4회 */
+    37.51%{
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    43.75%{
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    43.751%{
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    49.9%{
+        transform: scaleY(0);
+        transform-origin: bottom;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 5회 */
+    50%{  
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    56.25%{
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    56.251%{
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    62.5%{
+        transform: scaleY(0);
+        transform-origin: bottom;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 6회 */
+    62.51%{
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    68.75%{
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    68.751%{
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    74.9%{
+        transform: scaleY(0);
+        transform-origin: bottom;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 7회 */
+    75%{
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    81.25%{
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    81.251%{
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    87.5%{
+        transform: scaleY(0);
+        transform-origin: bottom;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 8회 */
+    87.51%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes topBottomLeft2 {
+    /* 1회 */
+    0% {
+        opacity: 0;
+    }
+    6.25% {
+    }
+    6.251% {
+    }
+    12.5% {
+    }
+    /* 2회 */
+    12.51%{
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    18.75%{   
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    18.751%{
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    24.9%{
+        transform: scaleY(0);
+        transform-origin: bottom;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 3회 */
+    25%{
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    31.25%{
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    31.251%{
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    37.5%{
+        transform: scaleY(0);
+        transform-origin: bottom;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 4회 */
+    37.51%{
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    43.75%{
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    43.751%{
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    49.9%{
+        transform: scaleY(0);
+        transform-origin: bottom;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 5회 */
+    50%{  
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    56.25%{
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    56.251%{
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    62.5%{
+        transform: scaleY(0);
+        transform-origin: bottom;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 6회 */
+    62.51%{
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    68.75%{
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    68.751%{
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    74.9%{
+        transform: scaleY(0);
+        transform-origin: bottom;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 7회 */
+    75%{
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    81.25%{
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    81.251%{
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    87.5%{
+        transform: scaleY(0);
+        transform-origin: bottom;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 8회 */
+    87.51%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes topBottomLeft3 {
+    /* 1회 */
+    0% {
+        opacity: 0;
+    }
+    6.25% {
+    }
+    6.251% {
+    }
+    12.5% {
+    }
+    /* 2회 */
+    12.51%{
+    }
+    18.75%{   
+    }
+    18.751%{
+    }
+    24.9%{
+    }
+    /* 3회 */
+    25%{
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    31.25%{
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    31.251%{
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    37.5%{
+        transform: scaleY(0);
+        transform-origin: bottom;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 4회 */
+    37.51%{
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    43.75%{
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    43.751%{
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    49.9%{
+        transform: scaleY(0);
+        transform-origin: bottom;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 5회 */
+    50%{  
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    56.25%{
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    56.251%{
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    62.5%{
+        transform: scaleY(0);
+        transform-origin: bottom;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 6회 */
+    62.51%{
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    68.75%{
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    68.751%{
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    74.9%{
+        transform: scaleY(0);
+        transform-origin: bottom;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 7회 */
+    75%{
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    81.25%{
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    81.251%{
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    87.5%{
+        transform: scaleY(0);
+        transform-origin: bottom;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 8회 */
+    87.51%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes topBottomLeft4 {
+    /* 1회 */
+    0% {
+        opacity: 0;
+    }
+    6.25% {
+    }
+    6.251% {
+    }
+    12.5% {
+    }
+    /* 2회 */
+    12.51%{
+    }
+    18.75%{   
+    }
+    18.751%{
+    }
+    24.9%{
+    }
+    /* 3회 */
+    25%{
+    }
+    31.25%{
+    }
+    31.251%{
+    }
+    37.5%{
+    }
+    /* 4회 */
+    37.51%{
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    43.75%{
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    43.751%{
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    49.9%{
+        transform: scaleY(0);
+        transform-origin: bottom;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 5회 */
+    50%{  
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    56.25%{
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    56.251%{
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    62.5%{
+        transform: scaleY(0);
+        transform-origin: bottom;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 6회 */
+    62.51%{
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    68.75%{
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    68.751%{
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    74.9%{
+        transform: scaleY(0);
+        transform-origin: bottom;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 7회 */
+    75%{
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    81.25%{
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    81.251%{
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    87.5%{
+        transform: scaleY(0);
+        transform-origin: bottom;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 8회 */
+    87.51%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes topBottomLeft5 {
+    /* 1회 */
+    0% {
+        opacity: 0;
+    }
+    6.25% {
+    }
+    6.251% {
+    }
+    12.5% {
+    }
+    /* 2회 */
+    12.51%{
+    }
+    18.75%{   
+    }
+    18.751%{
+    }
+    24.9%{
+    }
+    /* 3회 */
+    25%{
+    }
+    31.25%{
+    }
+    31.251%{
+    }
+    37.5%{
+    }
+    /* 4회 */
+    37.51%{
+    }
+    43.75%{
+    }
+    43.751%{
+    }
+    49.9%{
+    }
+    /* 5회 */
+    50%{  
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    56.25%{
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    56.251%{
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    62.5%{
+        transform: scaleY(0);
+        transform-origin: bottom;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 6회 */
+    62.51%{
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    68.75%{
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    68.751%{
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    74.9%{
+        transform: scaleY(0);
+        transform-origin: bottom;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 7회 */
+    75%{
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    81.25%{
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    81.251%{
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    87.5%{
+        transform: scaleY(0);
+        transform-origin: bottom;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 8회 */
+    87.51%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes topBottomLeft6 {
+    /* 1회 */
+    0% {
+        opacity: 0;
+    }
+    6.25% {
+    }
+    6.251% {
+    }
+    12.5% {
+    }
+    /* 2회 */
+    12.51%{
+    }
+    18.75%{   
+    }
+    18.751%{
+    }
+    24.9%{
+    }
+    /* 3회 */
+    25%{
+    }
+    31.25%{
+    }
+    31.251%{
+    }
+    37.5%{
+    }
+    /* 4회 */
+    37.51%{
+    }
+    43.75%{
+    }
+    43.751%{
+    }
+    49.9%{
+    }
+    /* 5회 */
+    50%{  
+    }
+    56.25%{
+    }
+    56.251%{
+    }
+    62.5%{
+    }
+    /* 6회 */
+    62.51%{
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    68.75%{
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    68.751%{
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    74.9%{
+        transform: scaleY(0);
+        transform-origin: bottom;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 7회 */
+    75%{
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    81.25%{
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    81.251%{
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    87.5%{
+        transform: scaleY(0);
+        transform-origin: bottom;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 8회 */
+    87.51%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes topBottomLeft7 {
+    /* 1회 */
+    0% {
+        opacity: 0;
+    }
+    6.25% {
+    }
+    6.251% {
+    }
+    12.5% {
+    }
+    /* 2회 */
+    12.51%{
+    }
+    18.75%{   
+    }
+    18.751%{
+    }
+    24.9%{
+    }
+    /* 3회 */
+    25%{
+    }
+    31.25%{
+    }
+    31.251%{
+    }
+    37.5%{
+    }
+    /* 4회 */
+    37.51%{
+    }
+    43.75%{
+    }
+    43.751%{
+    }
+    49.9%{
+    }
+    /* 5회 */
+    50%{  
+    }
+    56.25%{
+    }
+    56.251%{
+    }
+    62.5%{
+    }
+    /* 6회 */
+    62.51%{
+    }
+    68.75%{
+    }
+    68.751%{
+    }
+    74.9%{
+    }
+    /* 7회 */
+    75%{
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    81.25%{
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    81.251%{
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    87.5%{
+        transform: scaleY(0);
+        transform-origin: bottom;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 8회 */
+    87.51%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes rightLeftBottom1 {
+    /* 1회 */
+    0% {
+        bottom:0;
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: right;
+        opacity: 0;
+    }
+    6.25% {
+        transform: scaleX(1);
+        transform-origin:  right;
+    }
+    6.251% {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    12.5% {
+        bottom:0;
+        transform: scaleX(0);
+        transform-origin: left;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 2회 */
+    12.51%{
+        opacity: 0;
+    }
+    24.9%{
+        opacity: 0;
+    }
+    /* 3회 */
+    25%{
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: right;
+        opacity: 0;
+    }
+    31.25%{
+        transform: scaleX(1);
+        transform-origin:  right;
+    }
+    31.251%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    37.5%{
+        bottom:0;
+        transform: scaleX(0);
+        transform-origin: left;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 4회 */
+    37.51%{
+        opacity: 0;
+    }
+    49.9%{
+        opacity: 0;
+    }
+    /* 5회 */
+    50%{
+        bottom:0;
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: right;
+        opacity: 0;
+    }
+    56.25%{
+        transform: scaleX(1);
+        transform-origin:  right;
+    }
+    56.251%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    62.5%{
+        bottom:0;
+        transform: scaleX(0);
+        transform-origin: left;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 6회 */
+    62.51%{
+        opacity: 0;
+    }
+    74.9%{
+        opacity: 0;
+    }
+    /* 7회 */
+    75%{
+        bottom:0;
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: right;
+        opacity: 0;
+    }
+    81.25%{
+        transform: scaleX(1);
+        transform-origin:  right;
+    }
+    81.251%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    87.5%{
+        bottom:0;
+        transform: scaleX(0);
+        transform-origin: left;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 8회 */
+    87.51%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes rightLeftBottom2 {
+    /* 1회 */
+    0% {
+        opacity: 0;
+    }
+    6.25% {
+    }
+    6.251% {
+    }
+    12.5% {
+    }
+    /* 2회 */
+    12.51%{
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: right;
+        opacity: 0;
+    }
+    18.75%{
+        transform: scaleX(1);
+        transform-origin:  right;
+    }
+    18.751%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    24.9%{
+        bottom:0;
+        transform: scaleX(0);
+        transform-origin: left;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 3회 */
+    25%{
+        opacity: 0;
+    }
+    31.25%{
+    }
+    31.251%{
+    }
+    37.5%{
+    }
+    /* 4회 */
+    37.51%{
+        bottom:0;
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: right;
+        opacity: 0;
+    }
+    43.75%{
+        transform: scaleX(1);
+        transform-origin:  right;
+    }
+    43.751%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    49.9%{
+        bottom:0;
+        transform: scaleX(0);
+        transform-origin: left;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 5회 */
+    50%{
+        opacity: 0;
+    }
+    56.25%{
+    }
+    56.251%{
+    }
+    62.5%{
+    }
+    /* 6회 */
+    62.51%{
+        bottom:0;
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: right;
+        opacity: 0;
+    }
+    68.75%{
+        transform: scaleX(1);
+        transform-origin:  right;
+    }
+    68.751%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    74.9%{
+        bottom:0;
+        transform: scaleX(0);
+        transform-origin: left;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 7회 */
+    75%{
+        opacity: 0;
+    }
+    81.25%{
+    }
+    81.251%{
+    }
+    87.5%{
+    }
+    /* 8회 */
+    87.51%{
+    }
+    93.75%{
+    }
+    93.751%{
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes rightLeftBottom3 {
+    /* 1회 */
+    0% {
+        opacity: 0;
+    }
+    6.25% {
+    }
+    6.251% {
+    }
+    12.5% {
+    }
+    /* 2회 */
+    12.51%{
+    }
+    18.75%{
+    }
+    18.751%{
+    }
+    24.9%{
+    }
+    /* 3회 */
+    25%{
+        bottom:0;
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: right;
+        opacity: 0;
+    }
+    31.25%{
+        transform: scaleX(1);
+        transform-origin:  right;
+    }
+    31.251%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    37.5%{
+        bottom:0;
+        transform: scaleX(0);
+        transform-origin: left;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 4회 */
+    37.51%{
+        opacity: 0;
+    }
+    43.75%{
+    }
+    43.751%{
+    }
+    49.9%{
+    }
+    /* 5회 */
+    50%{
+        bottom:0;
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: right;
+        opacity: 0;
+    }
+    56.25%{
+        transform: scaleX(1);
+        transform-origin:  right;
+    }
+    56.251%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    62.5%{
+        bottom:0;
+        transform: scaleX(0);
+        transform-origin: left;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 6회 */
+    62.51%{
+    }
+    68.75%{
+    }
+    68.751%{
+    }
+    74.9%{
+       
+    }
+    /* 7회 */
+    75%{
+        bottom:0;
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: right;
+        opacity: 0;
+    }
+    81.25%{
+        transform: scaleX(1);
+        transform-origin:  right;
+    }
+    81.251%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    87.5%{
+        bottom:0;
+        transform: scaleX(0);
+        transform-origin: left;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 8회 */
+    87.51%{
+        opacity: 0;
+    }
+    93.75%{
+    }
+    93.751%{
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes rightLeftBottom4 {
+    /* 1회 */
+    0% {
+        opacity: 0;
+    }
+    6.25% {
+    }
+    6.251% {
+    }
+    12.5% {
+    }
+    /* 2회 */
+    12.51%{
+    }
+    18.75%{
+    }
+    18.751%{
+    }
+    24.9%{
+    }
+    /* 3회 */
+    25%{
+    }
+    31.25%{
+    }
+    31.251%{
+    }
+    37.5%{
+    }
+    /* 4회 */
+    37.51%{
+        bottom:0;
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: right;
+        opacity: 0;
+    }
+    43.75%{
+        transform: scaleX(1);
+        transform-origin:  right;
+    }
+    43.751%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    49.9%{
+        bottom:0;
+        transform: scaleX(0);
+        transform-origin: left;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 5회 */
+    50%{
+        opacity: 0;
+    }
+    56.25%{
+    }
+    56.251%{
+    }
+    62.5%{
+    }
+    /* 6회 */
+    62.51%{
+        bottom:0;
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: right;
+        opacity: 0;
+    }
+    68.75%{
+        transform: scaleX(1);
+        transform-origin:  right;
+    }
+    68.751%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    74.9%{
+        bottom:0;
+        transform: scaleX(0);
+        transform-origin: left;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 7회 */
+    75%{
+        opacity: 0;
+    }
+    81.25%{
+    }
+    81.251%{
+    }
+    87.5%{
+        opacity: 0;
+    }
+    /* 8회 */
+    87.51%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes rightLeftBottom5 {
+    /* 1회 */
+    0% {
+        opacity: 0;
+    }
+    6.25% {
+    }
+    6.251% {
+    }
+    12.5% {
+    }
+    /* 2회 */
+    12.51%{
+    }
+    18.75%{
+    }
+    18.751%{
+    }
+    24.9%{
+    }
+    /* 3회 */
+    25%{
+    }
+    31.25%{
+    }
+    31.251%{
+    }
+    37.5%{
+    }
+    /* 4회 */
+    37.51%{
+    }
+    43.75%{
+    }
+    43.751%{
+    }
+    49.9%{
+    }
+    /* 5회 */
+    50%{
+        bottom:0;
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: right;
+        opacity: 0;
+    }
+    56.25%{
+        transform: scaleX(1);
+        transform-origin:  right;
+    }
+    56.251%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    62.5%{
+        bottom:0;
+        transform: scaleX(0);
+        transform-origin: left;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 6회 */
+    62.51%{
+        opacity: 0;
+    }
+    68.75%{
+    }
+    68.751%{
+    }
+    74.9%{
+        opacity: 0;
+    }
+    /* 7회 */
+    75%{
+        bottom:0;
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: right;
+        opacity: 0;
+    }
+    81.25%{
+        transform: scaleX(1);
+        transform-origin:  right;
+    }
+    81.251%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    87.5%{
+        bottom:0;
+        transform: scaleX(0);
+        transform-origin: left;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 8회 */
+    87.51%{
+        opacity: 0;
+    }
+    93.75%{
+    }
+    93.751%{
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes rightLeftBottom6 {
+    /* 1회 */
+    0% {
+        opacity: 0;
+    }
+    6.25% {
+    }
+    6.251% {
+    }
+    12.5% {
+    }
+    /* 2회 */
+    12.51%{
+    }
+    18.75%{
+    }
+    18.751%{
+    }
+    24.9%{
+    }
+    /* 3회 */
+    25%{
+    }
+    31.25%{
+    }
+    31.251%{
+    }
+    37.5%{
+    }
+    /* 4회 */
+    37.51%{
+    }
+    43.75%{
+    }
+    43.751%{
+    }
+    49.9%{
+    }
+    /* 5회 */
+    50%{
+    }
+    56.25%{
+    }
+    56.251%{
+    }
+    62.5%{
+    }
+    /* 6회 */
+    62.51%{
+        bottom:0;
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: right;
+        opacity: 0;
+    }
+    68.75%{
+        transform: scaleX(1);
+        transform-origin:  right;
+    }
+    68.751%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    74.9%{
+        bottom:0;
+        transform: scaleX(0);
+        transform-origin: left;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 7회 */
+    75%{
+        opacity: 0;
+    }
+    81.25%{
+    }
+    81.251%{
+    }
+    87.5%{
+    }
+    /* 8회 */
+    87.51%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes rightLeftBottom7 {
+    /* 1회 */
+    0% {
+        opacity: 0;
+    }
+    6.25% {
+    }
+    6.251% {
+    }
+    12.5% {
+    }
+    /* 2회 */
+    12.51%{
+    }
+    18.75%{
+    }
+    18.751%{
+    }
+    24.9%{
+    }
+    /* 3회 */
+    25%{
+    }
+    31.25%{
+    }
+    31.251%{
+    }
+    37.5%{
+    }
+    /* 4회 */
+    37.51%{
+    }
+    43.75%{
+    }
+    43.751%{
+    }
+    49.9%{
+    }
+    /* 5회 */
+    50%{
+    }
+    56.25%{
+    }
+    56.251%{
+    }
+    62.5%{
+    }
+    /* 6회 */
+    62.51%{
+    }
+    68.75%{
+    }
+    68.751%{
+    }
+    74.9%{
+    }
+    /* 7회 */
+    75%{
+        bottom:0;
+        height:10px;
+        width:100%;
+        transform: scaleX(0);
+        transform-origin: right;
+        opacity: 0;
+    }
+    81.25%{
+        transform: scaleX(1);
+        transform-origin:  right;
+    }
+    81.251%{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    87.5%{
+        bottom:0;
+        transform: scaleX(0);
+        transform-origin: left;
+        height:10px;
+        width:100%;
+        opacity: 1;
+    }
+    /* 8회 */
+    87.51%{
+        opacity: 0;
+    }
+    93.75%{
+    }
+    93.751%{
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes bottomTopRight1 {
+    /* 1회 */
+    0% {
+        right: 0;
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
+    }
+    6.25% {
+        transform: scaleY(1);
+        transform-origin:  bottom;
+    }
+    6.251% {
+        transform: scaleY(1);
+        transform-origin:  top;
+    }
+    12.5% {
+        right: 0;
+        transform: scaleY(0);
+        transform-origin:  top;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 2회 */
+    12.51%{
+        right: 0;
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
+    }
+    18.75%{   
+        transform: scaleY(1);
+        transform-origin:  bottom;
+    }
+    18.751%{
+        transform: scaleY(1);
+        transform-origin:  top;
+    }
+    24.9%{
+        right: 0;
+        transform: scaleY(0);
+        transform-origin:  top;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 3회 */
+    25%{
+        right: 0;
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
+    }
+    31.25%{
+        transform: scaleY(1);
+        transform-origin:  bottom;
+    }
+    31.251%{
+        transform: scaleY(1);
+        transform-origin:  top;
+    }
+    37.5%{
+        right: 0;
+        transform: scaleY(0);
+        transform-origin:  top;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 4회 */
+    37.51%{
+        right: 0;
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
+    }
+    43.75%{
+        transform: scaleY(1);
+        transform-origin:  bottom;
+    }
+    43.751%{
+        transform: scaleY(1);
+        transform-origin:  top;
+    }
+    49.9%{
+        right: 0;
+        transform: scaleY(0);
+        transform-origin:  top;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 5회 */
+    50%{
+        right: 0;
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
+    }
+    56.25%{
+        transform: scaleY(1);
+        transform-origin:  bottom;
+    }
+    56.251%{
+        transform: scaleY(1);
+        transform-origin:  top;
+    }
+    62.5%{
+        right: 0;
+        transform: scaleY(0);
+        transform-origin:  top;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 6회 */
+    62.51%{
+        right: 0;
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
+    }
+    68.75%{
+        transform: scaleY(1);
+        transform-origin:  bottom;
+    }
+    68.751%{
+        transform: scaleY(1);
+        transform-origin:  top;
+    }
+    74.9%{
+        right: 0;
+        transform: scaleY(0);
+        transform-origin:  top;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 7회 */
+    75%{
+        right: 0;
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
+    }
+    81.25%{
+        transform: scaleY(1);
+        transform-origin:  bottom;
+    }
+    81.251%{
+        transform: scaleY(1);
+        transform-origin:  top;
+    }
+    87.5%{
+        right: 0;
+        transform: scaleY(0);
+        transform-origin:  top;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 8회 */
+    87.51%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes bottomTopRight2 {
+    /* 1회 */
+    0% {opacity: 0;
+    }
+    6.25% {
+    }
+    6.251% {
+    }
+    12.5% {
+    }
+    /* 2회 */
+    12.51%{
+        right: 0;
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
+    }
+    18.75%{   
+        transform: scaleY(1);
+        transform-origin:  bottom;
+    }
+    18.751%{
+        transform: scaleY(1);
+        transform-origin:  top;
+    }
+    24.9%{
+        right: 0;
+        transform: scaleY(0);
+        transform-origin:  top;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 3회 */
+    25%{
+        right: 0;
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
+    }
+    31.25%{
+        transform: scaleY(1);
+        transform-origin:  bottom;
+    }
+    31.251%{
+        transform: scaleY(1);
+        transform-origin:  top;
+    }
+    37.5%{
+        right: 0;
+        transform: scaleY(0);
+        transform-origin:  top;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 4회 */
+    37.51%{
+        right: 0;
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
+    }
+    43.75%{
+        transform: scaleY(1);
+        transform-origin:  bottom;
+    }
+    43.751%{
+        transform: scaleY(1);
+        transform-origin:  top;
+    }
+    49.9%{
+        right: 0;
+        transform: scaleY(0);
+        transform-origin:  top;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 5회 */
+    50%{
+        right: 0;
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
+    }
+    56.25%{
+        transform: scaleY(1);
+        transform-origin:  bottom;
+    }
+    56.251%{
+        transform: scaleY(1);
+        transform-origin:  top;
+    }
+    62.5%{
+        right: 0;
+        transform: scaleY(0);
+        transform-origin:  top;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 6회 */
+    62.51%{
+        right: 0;
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
+    }
+    68.75%{
+        transform: scaleY(1);
+        transform-origin:  bottom;
+    }
+    68.751%{
+        transform: scaleY(1);
+        transform-origin:  top;
+    }
+    74.9%{
+        right: 0;
+        transform: scaleY(0);
+        transform-origin:  top;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 7회 */
+    75%{
+        right: 0;
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
+    }
+    81.25%{
+        transform: scaleY(1);
+        transform-origin:  bottom;
+    }
+    81.251%{
+        transform: scaleY(1);
+        transform-origin:  top;
+    }
+    87.5%{
+        right: 0;
+        transform: scaleY(0);
+        transform-origin:  top;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 8회 */
+    87.51%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes bottomTopRight3 {
+    /* 1회 */
+    0% {opacity: 0;
+    }
+    6.25% {
+    }
+    6.251% {
+    }
+    12.5% {
+    }
+    /* 2회 */
+    12.51%{
+    }
+    18.75%{   
+    }
+    18.751%{
+    }
+    24.9%{
+    }
+    /* 3회 */
+    25%{
+        right: 0;
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
+    }
+    31.25%{
+        transform: scaleY(1);
+        transform-origin:  bottom;
+    }
+    31.251%{
+        transform: scaleY(1);
+        transform-origin:  top;
+    }
+    37.5%{
+        right: 0;
+        transform: scaleY(0);
+        transform-origin:  top;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 4회 */
+    37.51%{
+        right: 0;
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
+    }
+    43.75%{
+        transform: scaleY(1);
+        transform-origin:  bottom;
+    }
+    43.751%{
+        transform: scaleY(1);
+        transform-origin:  top;
+    }
+    49.9%{
+        right: 0;
+        transform: scaleY(0);
+        transform-origin:  top;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 5회 */
+    50%{
+        right: 0;
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
+    }
+    56.25%{
+        transform: scaleY(1);
+        transform-origin:  bottom;
+    }
+    56.251%{
+        transform: scaleY(1);
+        transform-origin:  top;
+    }
+    62.5%{
+        right: 0;
+        transform: scaleY(0);
+        transform-origin:  top;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 6회 */
+    62.51%{
+        right: 0;
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
+    }
+    68.75%{
+        transform: scaleY(1);
+        transform-origin:  bottom;
+    }
+    68.751%{
+        transform: scaleY(1);
+        transform-origin:  top;
+    }
+    74.9%{
+        right: 0;
+        transform: scaleY(0);
+        transform-origin:  top;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 7회 */
+    75%{
+        right: 0;
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
+    }
+    81.25%{
+        transform: scaleY(1);
+        transform-origin:  bottom;
+    }
+    81.251%{
+        transform: scaleY(1);
+        transform-origin:  top;
+    }
+    87.5%{
+        right: 0;
+        transform: scaleY(0);
+        transform-origin:  top;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 8회 */
+    87.51%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes bottomTopRight4 {
+    /* 1회 */
+    0% {opacity: 0;
+    }
+    6.25% {
+    }
+    6.251% {
+    }
+    12.5% {
+    }
+    /* 2회 */
+    12.51%{
+    }
+    18.75%{   
+    }
+    18.751%{
+    }
+    24.9%{
+    }
+    /* 3회 */
+    25%{
+    }
+    31.25%{
+    }
+    31.251%{
+    }
+    37.5%{
+    }
+    /* 4회 */
+    37.51%{
+        right: 0;
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
+    }
+    43.75%{
+        transform: scaleY(1);
+        transform-origin:  bottom;
+    }
+    43.751%{
+        transform: scaleY(1);
+        transform-origin:  top;
+    }
+    49.9%{
+        right: 0;
+        transform: scaleY(0);
+        transform-origin:  top;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 5회 */
+    50%{
+        right: 0;
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
+    }
+    56.25%{
+        transform: scaleY(1);
+        transform-origin:  bottom;
+    }
+    56.251%{
+        transform: scaleY(1);
+        transform-origin:  top;
+    }
+    62.5%{
+        right: 0;
+        transform: scaleY(0);
+        transform-origin:  top;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 6회 */
+    62.51%{
+        right: 0;
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
+    }
+    68.75%{
+        transform: scaleY(1);
+        transform-origin:  bottom;
+    }
+    68.751%{
+        transform: scaleY(1);
+        transform-origin:  top;
+    }
+    74.9%{
+        right: 0;
+        transform: scaleY(0);
+        transform-origin:  top;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 7회 */
+    75%{
+        right: 0;
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
+    }
+    81.25%{
+        transform: scaleY(1);
+        transform-origin:  bottom;
+    }
+    81.251%{
+        transform: scaleY(1);
+        transform-origin:  top;
+    }
+    87.5%{
+        right: 0;
+        transform: scaleY(0);
+        transform-origin:  top;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 8회 */
+    87.51%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes bottomTopRight5 {
+    /* 1회 */
+    0% {opacity: 0;
+    }
+    6.25% {
+    }
+    6.251% {
+    }
+    12.5% {
+    }
+    /* 2회 */
+    12.51%{
+    }
+    18.75%{   
+    }
+    18.751%{
+    }
+    24.9%{
+    }
+    /* 3회 */
+    25%{
+    }
+    31.25%{
+    }
+    31.251%{
+    }
+    37.5%{
+    }
+    /* 4회 */
+    37.51%{
+    }
+    43.75%{
+    }
+    43.751%{
+    }
+    49.9%{
+    }
+    /* 5회 */
+    50%{
+        right: 0;
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
+    }
+    56.25%{
+        transform: scaleY(1);
+        transform-origin:  bottom;
+    }
+    56.251%{
+        transform: scaleY(1);
+        transform-origin:  top;
+    }
+    62.5%{
+        right: 0;
+        transform: scaleY(0);
+        transform-origin:  top;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 6회 */
+    62.51%{
+        right: 0;
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
+    }
+    68.75%{
+        transform: scaleY(1);
+        transform-origin:  bottom;
+    }
+    68.751%{
+        transform: scaleY(1);
+        transform-origin:  top;
+    }
+    74.9%{
+        right: 0;
+        transform: scaleY(0);
+        transform-origin:  top;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 7회 */
+    75%{
+        right: 0;
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
+    }
+    81.25%{
+        transform: scaleY(1);
+        transform-origin:  bottom;
+    }
+    81.251%{
+        transform: scaleY(1);
+        transform-origin:  top;
+    }
+    87.5%{
+        right: 0;
+        transform: scaleY(0);
+        transform-origin:  top;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 8회 */
+    87.51%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes bottomTopRight6 {
+    /* 1회 */
+    0% {opacity: 0;
+    }
+    6.25% {
+    }
+    6.251% {
+    }
+    12.5% {
+    }
+    /* 2회 */
+    12.51%{
+    }
+    18.75%{   
+    }
+    18.751%{
+    }
+    24.9%{
+    }
+    /* 3회 */
+    25%{
+    }
+    31.25%{
+    }
+    31.251%{
+    }
+    37.5%{
+    }
+    /* 4회 */
+    37.51%{
+    }
+    43.75%{
+    }
+    43.751%{
+    }
+    49.9%{
+    }
+    /* 5회 */
+    50%{
+    }
+    56.25%{
+    }
+    56.251%{
+    }
+    62.5%{
+    }
+    /* 6회 */
+    62.51%{
+        right: 0;
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
+    }
+    68.75%{
+        transform: scaleY(1);
+        transform-origin:  bottom;
+    }
+    68.751%{
+        transform: scaleY(1);
+        transform-origin:  top;
+    }
+    74.9%{
+        right: 0;
+        transform: scaleY(0);
+        transform-origin:  top;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 7회 */
+    75%{
+        right: 0;
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
+    }
+    81.25%{
+        transform: scaleY(1);
+        transform-origin:  bottom;
+    }
+    81.251%{
+        transform: scaleY(1);
+        transform-origin:  top;
+    }
+    87.5%{
+        right: 0;
+        transform: scaleY(0);
+        transform-origin:  top;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 8회 */
+    87.51%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes bottomTopRight7 {
+    /* 1회 */
+    0% {opacity: 0;
+    }
+    6.25% {
+    }
+    6.251% {
+    }
+    12.5% {
+    }
+    /* 2회 */
+    12.51%{
+    }
+    18.75%{   
+    }
+    18.751%{
+    }
+    24.9%{
+    }
+    /* 3회 */
+    25%{
+    }
+    31.25%{
+    }
+    31.251%{
+    }
+    37.5%{
+    }
+    /* 4회 */
+    37.51%{
+    }
+    43.75%{
+    }
+    43.751%{
+    }
+    49.9%{
+    }
+    /* 5회 */
+    50%{
+    }
+    56.25%{
+    }
+    56.251%{
+    }
+    62.5%{
+    }
+    /* 6회 */
+    62.51%{
+    }
+    68.75%{
+    }
+    68.751%{
+    }
+    74.9%{
+    }
+    /* 7회 */
+    75%{
+        right: 0;
+        height:100%;
+        width:10px;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
+    }
+    81.25%{
+        transform: scaleY(1);
+        transform-origin:  bottom;
+    }
+    81.251%{
+        transform: scaleY(1);
+        transform-origin:  top;
+    }
+    87.5%{
+        right: 0;
+        transform: scaleY(0);
+        transform-origin:  top;
+        height:100%;
+        width:10px;
+        opacity: 1;
+    }
+    /* 8회 */
+    87.51%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+/* 좌측 */
+#pa1::after{
+    animation: leftRightTop1 18s ease infinite;
+}
+#pa1::before{
+    animation: topBottomLeft1 18s ease infinite;
+}
+/* 2번째 */
+#pa2::after,#pa6::after{
+    animation: leftRightTop2 18s ease infinite;
+}
+#pa2::before,#pa6::before{
+    animation: topBottomLeft2 18s ease infinite;
+}
+/* 3번째 */
+#pa3::after,#pa7::after,#pa11::after{
+    animation: leftRightTop3 18s ease infinite;
+}
+#pa3::before,#pa7::before,#pa11::before{
+    animation: topBottomLeft3 18s ease infinite ;
+}
+/*4번째 */
+#pa4::after,#pa8::after,#pa12::after,#pa16::after{
+    animation: leftRightTop4 18s ease infinite;
+}
+#pa4::before,#pa8::before,#pa12::before,#pa16::before{
+    animation: topBottomLeft4 18s ease infinite;
+}
+/*5번째 */
+#pa5::after,#pa9::after,#pa13::after,#pa17::after,#pa21::after{
+    animation: leftRightTop5 18s ease infinite;
+}
+#pa5::before,#pa9::before,#pa13::before,#pa17::before,#pa21::before{
+    animation: topBottomLeft5 18s ease infinite;
+}
+/*6번째 */
+#pa10::after,#pa14::after,#pa18::after,#pa22::after,#pa26::after{
+    animation: leftRightTop6 18s ease infinite;
+}
+#pa10::before,#pa14::before,#pa18::before,#pa22::before,#pa26::before{
+    animation: topBottomLeft6 18s ease infinite;
+}
+/*7번째 */
+#pa15::after,#pa19::after,#pa27::after,#pa31::after{
+    animation: leftRightTop7 18s ease infinite;
+}
+#pa15::before,#pa19::before,#pa27::before,#pa31::before{
+    animation: topBottomLeft7 18s ease infinite;
+}
+/* 우측 */
+/*1번째 */
+#pa50::after{
+    animation: rightLeftBottom1 18s ease infinite;
+}
+#pa50::before{
+    animation: bottomTopRight1 18s ease infinite;
+}
+/*2번째 */
+#pa45::after,#pa49::after{
+    animation: rightLeftBottom2 18s ease infinite;
+}
+#pa45::before,#pa49::before{
+    animation: bottomTopRight2 18s ease infinite;
+}
+/*3번째 */
+#pa40::after,#pa44::after,#pa48::after{
+    animation: rightLeftBottom3 18s ease infinite;
+}
+#pa40::before,#pa44::before,#pa48::before{
+    animation: bottomTopRight3 18s ease infinite;
+}
+/*4번째 */
+#pa35::after,#pa39::after,#pa43::after,#pa47::after{
+    animation: rightLeftBottom4 18s ease infinite;
+}
+#pa35::before,#pa39::before,#pa43::before,#pa47::before{
+    animation: bottomTopRight4 18s ease infinite;
+}
+/*5번째 */
+#pa30::after,#pa34::after,#pa38::after,#pa42::after,#pa46::after{
+    animation: rightLeftBottom5 18s ease infinite;
+}
+#pa30::before,#pa34::before,#pa38::before,#pa42::before,#pa46::before{
+    animation: bottomTopRight5 18s ease infinite;
+}
+/* 6번째 */
+#pa25::after,#pa29::after,#pa33::after,#pa37::after,#pa41::after{
+    animation: rightLeftBottom6 18s ease infinite;
+}
+#pa25::before,#pa29::before,#pa33::before,#pa37::before,#pa41::before{
+    animation: bottomTopRight6 18s ease infinite;
+}
+/* 7번째 */
+#pa20::after,#pa24::after,#pa32::after,#pa36::after{
+    animation: rightLeftBottom7 18s ease infinite;
+}
+#pa20::before,#pa24::before,#pa32::before,#pa36::before{
+    animation: bottomTopRight7 18s ease infinite;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+    <div class="block">
+            <div id ="pa1"></div>
+            <div id ="pa2"></div>
+            <div id ="pa3"></div>
+            <div id ="pa4"></div>
+            <div id ="pa5"></div>
+            <div id ="pa6"></div>
+            <div id ="pa7"></div>
+            <div id ="pa8"></div>
+            <div id ="pa9"></div>
+            <div id ="pa10"></div>
+            <div id ="pa11"></div>
+            <div id ="pa12"></div>
+            <div id ="pa13"></div>
+            <div id ="pa14"></div>
+            <div id ="pa15"></div>
+            <div id ="pa16"></div>
+            <div id ="pa17"></div>
+            <div id ="pa18"></div>
+            <div id ="pa19"></div>
+            <div id ="pa20"></div>
+            <div id ="pa21"></div>
+            <div id ="pa22"></div>
+            <div id ="pa23"><a type ="button" href="#">회원가입</a></div>
+            <div id ="pa24"></div>
+            <div id ="pa25"></div>
+            <div id ="pa26"></div>
+            <div id ="pa27"></div>
+            <div id ="pa28"><a type ="button" href="signup.html">로그인</a></div>
+            <div id ="pa29"></div>
+            <div id ="pa30"></div>
+            <div id ="pa31"></div>
+            <div id ="pa32"></div>
+            <div id ="pa33"></div>
+            <div id ="pa34"></div>
+            <div id ="pa35"></div>
+            <div id ="pa36"></div>
+            <div id ="pa37"></div>
+            <div id ="pa38"></div>
+            <div id ="pa39"></div>
+            <div id ="pa40"></div>
+            <div id ="pa41"></div>
+            <div id ="pa42"></div>
+            <div id ="pa43"></div>
+            <div id ="pa44"></div>
+            <div id ="pa45"></div>
+            <div id ="pa46"></div>
+            <div id ="pa47"></div>
+            <div id ="pa48"></div>
+            <div id ="pa49"></div>
+            <div id ="pa50"></div>
+        </div> 
+    </div>
+</div>
+</body>
+</html>

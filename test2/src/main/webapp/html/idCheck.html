@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Insert title here</title>
+    <script>
+        function bringId() {
+            document.querySelector("#userId").value=window.opener.document.querySelector('#userId').value
+        }
+    </script>
+</head>
+
+<body onload="bringId()">
+    <form action="../checkId">
+        <input id="userId" name ="userId" type="text" >
+        <input id="checkId" name ="checkId" type="submit" value=`${req.test}`> 
+        <input  type="text" name ="test" value="중복확인"> 
+        <div>
+        <input id="agree" name="agree" type="hidden">
+        <input id="cancel" name="cancel" type="button" value="취소" onclick="window.close()">
+        </div>
+    </form>
+   
+</body>
+
+</html>

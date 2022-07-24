@@ -1,0 +1,49 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#container {
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+}
+
+form {
+    width: 100%;
+    height: 100%;
+}
+
+#left {
+    float: left;
+    width: 45%;
+    height: 100%;
+}
+
+#inputText {
+    width: 100%;
+    height: 80%;
+}
+#center{
+    margin-top: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    float: left;
+}
+
+#right {
+    float: left;
+    width: 45%;
+    height: 100%;
+
+}
+
+#outputText {
+    width: 100%;
+    height: 80%;
+}

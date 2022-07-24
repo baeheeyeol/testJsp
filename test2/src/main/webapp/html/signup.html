@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Insert title here</title>
+    <style>
+        p {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Signup</h1>
+        <form action="../addsUser">
+            <div>
+                <form action="../checkUserId">
+                    <input id="userId" name="userId" type="text" placeholder="아이디">
+                    <input id="checkUserId" name="CheckuserId" type="button" onclick="openIdCheck()" value="중복확인">
+                    <p>123</p>
+                </form>
+            </div>
+            <div>
+                <input id="userPw1" name="userPw1" type="password" placeholder="비밀번호">
+            </div>
+            <div>
+                <input id="userPw2" name="userPw2" type="password" placeholder="비밀번호 확인">
+            </div>
+            <input id="signup" name="signup" type="submit" value="가입하기">
+        </form>
+    </div>
+    <script>
+        function openIdCheck() {
+          
+            window.open("idCheck.html", "idCheck", "width=500, height=300, resizable = no, scrollbars = no")
+        }
+    </script>
+</body>
+
+</html>
